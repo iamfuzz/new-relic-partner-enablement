@@ -6,11 +6,11 @@ const config = {
     trailingSlash: false,
   },
   header: {
-    logo: 'https://newrelic.com/assets/newrelic/source/NewRelic-logo-bug-w.svg',
+    logo: 'https://newrelic.com/themes/custom/curio/assets/mediakit/NR_logo_Horizontal_Rev.svg',
     logoLink: '/',
     title:
-      "<a href='/'><img class='img-responsive' src='https://newrelic.com/assets/newrelic/source/NewRelic-logo-bug-w.svg' alt='New Relic logo' /></a>",
-    githubUrl: 'https://github.com/gspncr/new-relic-partner-enablement',
+      "<a href='/'><img class='img-responsive' src='https://newrelic.com/themes/custom/curio/assets/mediakit/NR_logo_Horizontal_Rev.svg' alt='New Relic logo' /></a>",
+    githubUrl: 'https://github.com/iamfuzz/new-relic-partner-enablement',
     helpUrl: '',
     tweetText: '',
     social: `<li>
@@ -50,13 +50,13 @@ const config = {
     frontline: false,
     ignoreIndex: true,
     title:
-      "<div class='greenCircle'></div><a href='https://docs.google.com/forms/d/e/1FAIpQLSfaNQGgIpKER_e3ZQEEmR4gODUMueArQbBWlFHpB3YFx1Y32Q/viewform'>go to self assessment</a>",
+      ""
   },
   siteMetadata: {
     title: 'New Relic Partner Enablement',
     description: 'A website for partner relics to get started with learning New Relic. ',
     ogImage: null,
-    docsLocation: 'https://github.com/gspncr/new-relic-partner-enablement/tree/main/content',
+    docsLocation: 'https://github.com/iamfuzz/new-relic-partner-enablement/tree/main/content',
     favicon: 'https://newrelic.com/favicon.ico',
   },
   pwa: {
