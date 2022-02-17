@@ -2,27 +2,6 @@ require("dotenv").config();
 const queries = require("./src/utils/algolia");
 const config = require("./config");
 const plugins = [
-  {
-    resolve: `gatsby-plugin-s3`,
-    options: {
-      bucketName: "partners.newrelic-es.com",
-    },
-  },
-  {
-    resolve: 'gatsby-plugin-newrelic',
-    options: {
-      configs: {
-        instrumentationType: 'proAndSPA',
-          accountId: '1147177',
-          trustKey: '1147177',
-          agentID: '335659352',
-          licenseKey: 'd2dacf146e',
-          applicationID: '335659352',
-          beacon: 'bam.nr-data.net',
-          errorBeacon: 'bam.nr-data.net'
-      }
-    }
-  },
   'gatsby-plugin-sitemap',
   'gatsby-plugin-sharp',
   {
@@ -119,5 +98,13 @@ module.exports = {
     headerLinks: config.header.links,
     siteUrl: config.gatsby.siteUrl,
   },
-  plugins: plugins
+  plugins: plugins,
+  flags: {
+    DEV_SSR: false,
+    FAST_DEV: false, // Enable all experiments aimed at improving develop server start time
+    PRESERVE_WEBPACK_CACHE: false, // (Umbrella Issue (https://gatsby.dev/cache-clearing-feedback)) · Use webpack's persistent caching and don't delete webpack's cache when changing gatsby-node.js & gatsby-config.js files.
+    PRESERVE_FILE_DOWNLOAD_CACHE: false, // (Umbrella Issue (https://gatsby.dev/cache-clearing-feedback)) · Don't delete the downloaded files cache when changing gatsby-node.js & gatsby-config.js files.
+    PARALLEL_SOURCING: false, // EXPERIMENTAL · (Umbrella Issue (https://gatsby.dev/parallel-sourcing-feedback)) · Run all source plugins at the same time instead of serially. For sites with multiple source plugins, this can speedup sourcing and transforming considerably.
+    FUNCTIONS: false // EXPERIMENTAL · (Umbrella Issue (https://gatsby.dev/functions-feedback)) · Compile Serverless functions in your Gatsby project and write them to disk, ready to deploy to Gatsby Cloud
+  }
 };
